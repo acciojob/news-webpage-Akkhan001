@@ -1,15 +1,90 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="en">
 
 <head>
-	<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .header {
+      text-align: center;
+      background-color: #011e29;
+      color: white;
+      height: 75px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Create a flex container to arrange items in columns */
+    .container {
+      display: flex;
+      flex-direction: row; /* Stack elements vertically */
+      align-items: center; /* Center the boxes */
+      
+    }
+
+    .box {
+      width: 80%; /* Adjust width of each box */
+      margin: 10px 0; /* Space between boxes */
+      padding: 20px;
+      border: 2px solid #011e29;
+      border-radius: 8px;
+      background-color: #f4f4f4;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .News img {
+      width: 100%; /* Makes images fill their container */
+      max-width: 500px;
+      height: auto;
+      margin: 10px 0;
+    }
+
+    /* Responsive design to stack content on smaller screens */
+    @media screen and (max-width: 768px) {
+      .box {
+        width: 100%; /* Make boxes full width on smaller screens */
+      }
+    }
+  </style>
 </head>
 
 <body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
+  <header class="header">
+    <h1>Shaw's News</h1>
+  </header>
+
+  <div class="container">
+    <!-- News Article Box -->
+    <div class="box NewsArticle">
+      <h3>Latest News Articles</h3>
+      <ul>
+        <li>Article 1</li>
+        <li>Article 2</li>
+        <li>Article 3</li>
+      </ul>
+    </div>
+
+    <!-- Main Article Box -->
+    <div class="box MainArticle">
+      <h3>Main Article</h3>
+      <p>Articles are used extensively by English language users, and for this very reason, it is important to know where
+        and where not to use them. In order to have a thorough knowledge of how to use the right articles in the right
+        places, have a look at the following.</p>
+    </div>
+
+    <!-- News Box with Images -->
+    <div class="box News">
+      <h3>Pictorial News</h3>
+      <img
+        src="https://images.hindustantimes.com/img/2023/01/29/550x309/delhi_rains_1674974112847_1674981888135_1674981888135.jpeg">
+      <img
+        src="https://images.hindustantimes.com/img/2023/01/29/550x309/ADANI-INDIA-GAUTAM-ADANI-0_1675011651023_1675011651023_1675011672003_1675011672003.JPG">
+      <img
+        src="https://images.hindustantimes.com/img/2023/01/29/550x309/FRANCE-REFORM-PENSIONS-31_1675022359706_1675022359706_1675022383851_1675022383851.JPG">
+    </div>
+  </div>
 
 </body>
 
