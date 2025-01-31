@@ -20,7 +20,9 @@
     .container {
       display: flex;
       flex-direction: row;
-      align-items: center;
+      align-items: flex-start; /* Changed from center to flex-start */
+      justify-content: flex-start; /* Ensures content aligns left */
+      gap: 20px; /* Adds spacing between sections */
     }
 
     .box {
@@ -33,6 +35,12 @@
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 
+    .pictorial-news-section {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start; /* Ensure images are left-aligned */
+    }
+
     .pictorial-news-section img {
       width: 100%;
       max-width: 500px;
@@ -42,6 +50,11 @@
 
     /* Responsive design to stack content on smaller screens */
     @media screen and (max-width: 768px) {
+      .container {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        align-items: center;
+      }
+
       .box {
         width: 100%;
       }
